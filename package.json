@@ -1,5 +1,6 @@
 {
   "name": "@codeforge/template",
+  "version": "1.0.0",
   "description": "CodeForge is a scalable TurboRepo monorepo template powered by pnpm, TypeScript, and modern tooling. Designed for building high-performance web applications with speed and best practices.",
   "type": "module",
   "scripts": {
