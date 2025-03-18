@@ -2,7 +2,7 @@
 
 ## Reporting Issues
 
-If you have found what you think is a bug, please [file an issue](https://github.com/issues/new/choose). **PLEASE NOTE:** Issues that are identified as implementation questions or non-issues will be immediately closed and redirected to [GitHub Discussions](https://github.com/discussions)
+If you have found what you think is a bug, please [file an issue](https://github.com/Jack-WebDev/codeforge/issues/new/choose).
 
 ## Suggesting new features
 
