@@ -1,0 +1,16 @@
+{
+    "extends": "../ts/base",
+    "compilerOptions": {
+        "baseUrl": ".",
+        "paths": {
+            "~/*": [
+                "src/*"
+            ]
+        }
+    },
+    "exclude": [
+        "node_modules",
+        "dist",
+        "build"
+    ]
+}

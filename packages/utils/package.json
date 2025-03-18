@@ -1,0 +1,33 @@
+{
+  "name": "@codeforge/utils",
+  "version": "1.0.0",
+  "private": true,
+  "description": "",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "license": "MIT",
+  "scripts": {
+    "build": "tsup",
+    "lint": "eslint --config ../../eslint.config.js '**/*.ts'"
+  },
+  "keywords": [],
+  "author": "Jack WebDev",
+  "dependencies": {
+    "date-fns": "^4.1.0",
+    "lodash.startcase": "^4.4.0"
+  },
+  "devDependencies": {
+    "@codeforge/buildkit": "workspace:*",
+    "@codeforge/lint": "workspace:*",
+    "@types/lodash.startcase": "^4.4.9"
+  }
+}

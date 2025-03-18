@@ -1,0 +1,15 @@
+{
+  "extends": "../ts/react-library.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "downlevelIteration": true,
+    "paths": {
+      "~/*": ["src/*"],
+      "@ui/*": ["./src/components"],
+      "~/components": ["./src/components"],
+      "~/lib": ["./src/lib"]
+    }
+  },
+  "exclude": ["dist", "build", "node_modules"],
+  "include": ["."]
+}

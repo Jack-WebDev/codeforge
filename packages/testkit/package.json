@@ -1,0 +1,36 @@
+{
+  "name": "@codeforge/testkit",
+  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "scripts": {
+    "build": "tsup",
+    "lint": "eslint --config ../../eslint.config.js '**/*.ts'"
+  },
+  "keywords": [],
+  "author": "Jack WebDev",
+  "license": "MIT",
+  "dependencies": {
+    "@codeforge/logger": "workspace:*",
+    "@codeforge/utils": "workspace:*",
+    "@faker-js/faker": "^9.3.0",
+    "@vitest/coverage-v8": "^3.0.4",
+    "vite-tsconfig-paths": "^5.0.1",
+    "vitest": "^3.0.4"
+  },
+  "devDependencies": {
+    "@codeforge/buildkit": "workspace:*",
+    "@codeforge/lint": "workspace:*"
+  }
+}

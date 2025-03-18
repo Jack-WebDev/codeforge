@@ -1,0 +1,40 @@
+{
+  "name": "codeforge",
+  "private": true,
+  "description": "CodeForge is a scalable TurboRepo monorepo template powered by pnpm, TypeScript, and modern tooling. Designed for building high-performance web applications with speed and best practices.",
+  "type": "module",
+  "scripts": {
+    "build": "turbo build",
+    "dev": "turbo dev --concurrency=20",
+    "lint": "turbo lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "schema": "rover graph introspect http://localhost:5500/graphql -o  packages/client/schema.graphql"
+  },
+  "devDependencies": {
+    "@actions/core": "^1.11.1",
+    "@actions/exec": "^1.1.1",
+    "@actions/glob": "^0.5.0",
+    "@actions/http-client": "^2.2.3",
+    "@eslint/eslintrc": "^3.2.0",
+    "@trivago/prettier-plugin-sort-imports": "^5.2.1",
+    "@tsconfig/node18": "^18.2.4",
+    "@turbo/gen": "^1.12.4",
+    "@types/lodash": "^4.17.14",
+    "@types/react": "^19.0.8",
+    "@types/react-dom": "^19.0.3",
+    "prettier": "^3.2.5",
+    "turbo": "^2.3.4",
+    "typescript": "5.5.4"
+  },
+  "packageManager": "pnpm@9.0.0",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "lodash": "^4.17.21",
+    "patch-package": "^8.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  }
+}

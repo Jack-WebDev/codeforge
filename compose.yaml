@@ -1,0 +1,63 @@
+services:
+  db:
+    restart: unless-stopped
+    image: postgres:15.4-alpine3.18
+    volumes:
+      - codeforgedbstore:/var/lib/postgresql/data
+    ports:
+      - '5545:5432'
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: codeforge_dev
+    healthcheck:
+      test: [ 'CMD-SHELL', 'pg_isready -U postgres -d codeforge_dev' ]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+      start_period: 10s
+    labels:
+      app: codeforge
+      environment: development
+    networks:
+      - codeforge-net
+
+  minio:
+    image: minio/minio:latest
+    restart: unless-stopped
+    command: server /data --console-address ":9001"
+    environment:
+      MINIO_ROOT_USER: minioadmin
+      MINIO_ROOT_PASSWORD: minioadmin
+    volumes:
+      - minio_data:/data
+    ports:
+      - "9000:9000"
+      - "9001:9001"
+    networks:
+      - codeforge-net
+
+  mailhog:
+    image: mailhog/mailhog
+    restart: unless-stopped
+    ports:
+      - "1025:1025"
+      - "8025:8025"
+    networks:
+      - codeforge-net
+
+  redis:
+    image: redis:7-alpine
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    networks:
+      - codeforge-net
+
+volumes:
+  codeforgedbstore:
+  minio_data:
+
+
+networks:
+  codeforge-net:
