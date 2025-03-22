@@ -1,6 +1,6 @@
 {
   "name": "codeforge-turbo-template",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "CodeForge is a scalable TurboRepo monorepo template powered by pnpm, TypeScript, and modern tooling. Designed for building high-performance web applications with speed and best practices.",
   "type": "module",
   "scripts": {
@@ -26,7 +26,6 @@
     "turbo": "^2.3.4",
     "typescript": "5.5.4"
   },
-  "packageManager": "pnpm@9.0.0",
   "engines": {
     "node": ">=18"
   },
